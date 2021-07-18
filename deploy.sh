@@ -17,7 +17,7 @@ if [ -z "$GITHUB_TOKEN" ]; then
   githubUrl=git@github.com:not-trace/blogs.git
 else
   msg='来自github actions的自动部署'
-  githubUrl=https://not-trace:${GITHUB_TOKEN}@github.com/c/blogs.git
+  githubUrl=https://not-trace:${GITHUB_TOKEN}@github.com/not-trace/blogs.git
 fi
 git init
 git add -A
