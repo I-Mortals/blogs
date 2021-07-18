@@ -222,9 +222,11 @@ export default {
   },
   created () {
     const sidebarOpen = this.$themeConfig.sidebarOpen
-	if(document.body.clientWidth < 800){
-		this.musicPe = true
-	}
+	this.$nextTick(()=>{
+		if(document.body.clientWidth < 800){
+			this.musicPe = true
+		}
+	})
     if (sidebarOpen === false) {
       this.isSidebarOpen = sidebarOpen
     }

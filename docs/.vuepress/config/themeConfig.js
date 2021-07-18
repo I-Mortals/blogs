@@ -58,7 +58,7 @@ module.exports = {
     // 博主信息，显示在首页侧边栏
     avatar: 'http://trace.maicaii.cn/img/20210715003844.png',
     name: 'Mortal红尘',
-    slogan: '热爱各种技术的一枚卑微前端',
+    slogan: '热爱各种技术的一枚憨憨前端',
   },
   social: {
     // 社交图标，显示于博主信息栏和页脚栏
