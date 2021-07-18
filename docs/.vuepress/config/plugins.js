@@ -99,4 +99,31 @@ module.exports = [
       },
     },
   ],
+  [
+	  "music-bar",
+	        {
+	          //手动添加歌曲,支持 URLs 或 base64 data URIs ,默认为空
+	          playList: [],
+	   
+	          platform: [
+	            //目前仅支持网易云 TODO:多平台支持,默认为空数组
+	            {
+	              name: "music.163.com",
+	              // songIDs:[]//支持多个歌曲 ID
+	              playListIDs: ["6861154058"] //支持多个歌单 ID
+	            }
+	          ],
+	   
+	          timeOut: 2000, //加载超时,单位毫秒,默认2000
+	   
+	          firstClickPlay: true, //首次点击自动播放,对移动端友好
+	   
+	          debugMode: false // 开发模式，如果在开发环境中，输出日志到控制台，默认 true
+	   
+	          //background: <String> //主容器样式
+	          //                       default: "linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%)"
+	   
+	          //frameColor: <String> default: $accentColor
+	        }
+  ]
 ]

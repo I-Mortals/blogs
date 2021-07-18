@@ -101,8 +101,8 @@
 	<!-- 看板娘 -->
 	<live2D v-if="live2DStatus"></live2D>
 	<!-- 全局播放器 -->
-	<iframe v-if="!musicPe" style="position: fixed;top: 3.5rem;right: 0rem;" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26491695&auto=1&height=66"></iframe>
-	<iframe v-else style="position: fixed;top: 3.5rem;right: 0rem;" frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=26491695&auto=1&height=32"></iframe>
+	<!-- <iframe v-if="!musicPe" style="position: fixed;top: 3.5rem;right: 0rem;" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26491695&auto=1&height=66"></iframe> -->
+	<!-- <iframe v-else style="position: fixed;top: 3.5rem;right: 0rem;" frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=26491695&auto=1&height=32"></iframe> -->
   </div>
 </template>
 
@@ -245,11 +245,6 @@ export default {
       linkElm.setAttribute("href", social.iconfontCssFile)
       document.head.appendChild(linkElm)
     }
-	this.$nextTick(()=>{
-		if(document.body.clientWidth < 800){
-			this.musicPe = true
-		}
-	})
   },
   mounted () {
     // 初始化页面时链接锚点无法跳转到指定id的解决方案
@@ -279,7 +274,11 @@ export default {
         setTimeout(() => { t = p }, 0)
       }
     }, 300))
-
+	
+	// 音乐UI
+	// if(document.body.clientWidth < 800){
+	// 	this.musicPe = true
+	// }
   },
   watch: {
     isSidebarOpen () {
@@ -367,6 +366,14 @@ export default {
   }
 }
 </script>
+
+<style type="text/css">
+	.music-bar{
+		top: 3.5rem;
+		left:unset !important;
+		bottom:unset !important;
+	}
+</style>
 
 <style lang="stylus">
 .custom-html-window
