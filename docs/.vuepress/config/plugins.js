@@ -6,7 +6,7 @@ module.exports = [
     excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
   }],
 
-  'vuepress-plugin-baidu-autopush', // 百度自动推送
+  'vuepress-plugin-baidu-autopush',// 百度自动推送
 
   // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
   [
@@ -75,7 +75,7 @@ module.exports = [
   [
     'vuepress-plugin-baidu-tongji', // 百度统计
     {
-      hm: '503f098e7e5b3a5b5d8c5fc2938af002',
+      hm: '6341e22946a768ff26ad5168ed6e2738',
     },
   ],
   [
