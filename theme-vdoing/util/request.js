@@ -2,7 +2,7 @@ import axios from './axios.min.js'
 
 
 var instance = axios.create({
-  baseURL: 'http://81.68.120.54:7001',
+  baseURL: 'https://mortals.maicaii.cn',
   timeout: 6000,
   headers: {}
 });
