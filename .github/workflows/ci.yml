@@ -24,7 +24,7 @@ jobs: # 工作流
         env: # 设置环境变量
           GITHUB: ${{ secrets.GITHUB }} # toKen私密变量
           CODING: ${{ secrets.CODING }} # toKen私密变量
-        run: /
+        run: |
           node --max_old_space_size=8192
           npm install && npm run deploy # 执行的命令  
         # package.json 中添加 "deploy": "bash deploy.sh"
