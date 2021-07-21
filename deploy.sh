@@ -24,9 +24,15 @@ cd docs/.vuepress/dist
  git commit -m "${msg}"
  git push -f $githubUrl master:pages # 推送到github pages分支
 
+# git@e.coding.net:zszl/blog/blog.git
+# deploy to coding
+if [ -z "$CODING" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
+  codingUrl=git@git.dev.tencent.com:zszl/blog/blog.git
+else
+  codingUrl=https://xugaoyi:${CODING}@git.dev.tencent.com/zszl/blog/blog.git
+fi
+git add -A
+git commit -m "${msg}"
+git push -f $codingUrl master # 推送到coding
 cd -
 rm -rf docs/.vuepress/dist
-
-# deploy to coding pages
-# 使用Coding的Actions(持续集成) github主分支推送时触发自动部署至coding pages
-bash ./pushMaster.sh
