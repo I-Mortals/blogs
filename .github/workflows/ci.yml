@@ -13,9 +13,9 @@ jobs: # 工作流
       matrix:
         node-version: [10.x]
 
-    steps: 
+    steps: # 步骤数组
       - name: Checkout # 步骤1
-        uses: actions/checkout@v1 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
+        uses: actions/checkout@v1 # 使用的动作。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
@@ -25,6 +25,8 @@ jobs: # 工作流
           GITHUB: ${{ secrets.GITHUB }} # toKen私密变量
           CODING: ${{ secrets.CODING }} # toKen私密变量
         run: |
-          node --max_old_space_size=8192
-          npm install && npm run deploy # 执行的命令  
+          npm install
+          npm install increase-memory-limit
+          npx cross-env LIMIT=4096 increase-memory-limit
+          npm run deploy # 执行的命令  
         # package.json 中添加 "deploy": "bash deploy.sh"
