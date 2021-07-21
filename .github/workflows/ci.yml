@@ -26,7 +26,5 @@ jobs: # 工作流
           CODING: ${{ secrets.CODING }} # toKen私密变量
         run: |
           npm install
-          npm install increase-memory-limit
-          npx cross-env LIMIT=4096 increase-memory-limit
           npm run deploy # 执行的命令  
         # package.json 中添加 "deploy": "bash deploy.sh"
