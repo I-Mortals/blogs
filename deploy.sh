@@ -19,7 +19,7 @@ cd docs/.vuepress/dist
    githubUrl=git@github.com:not-trace/blogs.git
  else
    msg='来自github actions的自动部署'
-   echo 个人令牌Github:${GITHUB}
+   echo 个人令牌Github
    githubUrl=https://not-trace:${GITHUB}@github.com/not-trace/blogs.git
    git config --global user.name "Mortal红尘"
    git config --global user.email "not_trace@163.com"
@@ -34,8 +34,8 @@ if [ -z "$CODING" ]; then  # -z 字符串 长度为0则为true；$CODING来自�
   echo 秘钥Coding
   codingUrl=git@e.coding.net:zszl/blog/blog.git
 else
-  echo 个人令牌Coding:${CODING}
   codingUrl=https://WxQGVvHQav:${CODING}@e.coding.net:zszl/blog/blog.git
+  echo 个人令牌Coding $codingUrl $CODING
 fi
 git push -f $codingUrl master # 推送到coding
 cd -
