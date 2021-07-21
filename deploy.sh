@@ -18,6 +18,8 @@ cd docs/.vuepress/dist
  else
    msg='来自github actions的自动部署'
    githubUrl=https://not-trace:${GITHUB}@github.com/not-trace/blogs.git
+   git config --global user.name "Mortal红尘"
+   git config --global user.email "not_trace@163.com"
  fi
  git init
  git add -A
