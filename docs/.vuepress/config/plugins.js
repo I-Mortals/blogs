@@ -87,7 +87,6 @@ module.exports = [
 		appId: 'PKrJKhfLqw2fzuHQKtKRL0Ps-gzGzoHsz',
 		appKey: 'XRsrwduoXNm83L93hm788qH4',
 		visitor: true, // 阅读量统计
-		path: 'window.location.pathname',
 		// 必填
 		requiredFields:['nick','mail'],
 		recordIP: true,
