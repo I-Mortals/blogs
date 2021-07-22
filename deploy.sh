@@ -37,7 +37,7 @@ else
    codingUrl=https://WxQGVvHQav:${CODING}@e.coding.net/zszl/blog/pages.git
    echo 个人令牌Coding
 fi
-git push $codingUrl master # 推送到coding pages仓库
+git push -f $codingUrl master # 推送到coding pages仓库
 cd -
 echo 删除dist
 rm -rf docs/.vuepress/dist
