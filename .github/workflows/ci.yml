@@ -23,7 +23,7 @@ jobs: # 工作流
       - name: run deploy.sh # 步骤3 （同时部署到github和coding）
         env: # 设置环境变量
           GITHUB: ${{ secrets.GITHUB }} # toKen私密变量
-#           CODING: ${{ secrets.CODING }} # toKen私密变量
+          CODING: ${{ secrets.CODING }} # toKen私密变量
         run: |
           npm install
           npm run deploy # 执行的命令  
