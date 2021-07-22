@@ -86,7 +86,8 @@ module.exports = [
 		el: '#valine-vuepress-comment',
 		appId: 'PKrJKhfLqw2fzuHQKtKRL0Ps-gzGzoHsz',
 		appKey: 'XRsrwduoXNm83L93hm788qH4',
-		visitor: true // 阅读量统计
+		visitor: true, // 阅读量统计
+		path: frontmatter.to.path
       },
     },
   ],
