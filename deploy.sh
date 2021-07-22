@@ -34,7 +34,7 @@ cd docs/.vuepress/dist
 #    echo 秘钥Coding
 #    codingUrl=git@e.coding.net:zszl/blog/blog.git
 # else
-#    codingUrl=https://WxQGVvHQav:${CODING}@e.coding.net:zszl/blog/blog.git
+#    codingUrl=https://WxQGVvHQav:${CODING}@e.coding.net/zszl/blog/test.git
 #    echo 个人令牌Coding
 # fi
 # git push $codingUrl master # 推送到coding
