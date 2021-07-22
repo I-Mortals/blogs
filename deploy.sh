@@ -34,10 +34,10 @@ if [ -z "$CODING" ]; then  # -z 字符串 长度为0则为true；$CODING来自�
    echo 秘钥Coding
    codingUrl=git@e.coding.net:zszl/blog/blog.git
 else
-   codingUrl=https://WxQGVvHQav:${CODING}@e.coding.net/zszl/blog/test.git
+   codingUrl=https://WxQGVvHQav:${CODING}@e.coding.net/zszl/blog/pages.git
    echo 个人令牌Coding
 fi
-git push $codingUrl master # 推送到coding
+git push $codingUrl master # 推送到coding pages仓库
 cd -
 echo 删除dist
 rm -rf docs/.vuepress/dist
