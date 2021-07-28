@@ -85,7 +85,7 @@ module.exports = {
     // 页脚信息
     createYear: 2021, // 博客创建年份
     copyrightInfo:
-      'Mortal红尘 | ', // 博客版权信息，支持a标签
+      'Mortal红尘 | <a href="https://beian.miit.gov.cn">黔ICP备2021006288号</a>', // 博客版权信息，支持a标签
   },
   htmlModules // 插入hmtl(广告)模块
 }

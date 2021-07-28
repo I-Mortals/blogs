@@ -71,7 +71,7 @@ export default {
     },
 	created() {
 		this.$nextTick(()=>{
-			this.url = '/blogs'+this.$site.themeConfig.live2dModel
+			this.url =this.$site.themeConfig.live2dModel
 			if (this.url != undefined) {
 			    this.loadJs("https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js")
 			    window.onload = () => {
