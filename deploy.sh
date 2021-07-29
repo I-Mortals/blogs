@@ -10,6 +10,8 @@ npm run build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
+echo 'blogs.mortals.vip' > CNAME
+
 # deploy to github  pages
 echo 同步至github pages 分支
  if [ -z "$GITHUB" ]; then
