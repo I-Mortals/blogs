@@ -9,7 +9,7 @@ module.exports = [
       {
         text: '前端学习笔记',
         items: [
-          { text: '前端', link: '/pages/6QZRMUXPQNI/' },
+          { text: '前端', link: '/pages/qldidh56/' },
         ],
       },
     ],
