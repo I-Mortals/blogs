@@ -18,7 +18,7 @@ module.exports = [
     text: '知识库',
     link: '/document/',
     items: [
-      { text: '《ES6教程》', link: '/pages/f344d070a1031ef7' },
+      { text: '《ES6教程》', link: '/pages/f344d070a1031ef7/' },
       { text: '《Git教程》', link: '/pages/8292d8/' },
       { text: '《JavaScript教程》', link: '/pages/0796ba76b4b55368/' },
 	  { text: '《JavaScript文章》', link: '/pages/8143cc480faf9a11/' },
