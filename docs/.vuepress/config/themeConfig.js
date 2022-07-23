@@ -52,7 +52,7 @@ module.exports = {
   author: {
     // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
     name: 'Mortal红尘', // 必需
-    link: 'https://gitee.com/not-trace', // 可选的
+    link: 'https://github.com/not-trace', // 可选的
   },
   blogger: {
     // 博主信息，显示在首页侧边栏
@@ -67,12 +67,12 @@ module.exports = {
       {
         iconClass: 'icon-youjian',
         title: '发邮件',
-        link: 'mailto:2237997237@qq.com',
+        link: 'mailto:wuchen.cg@gmail.com',
       },
       {
         iconClass: 'icon-github',
         title: 'GitHub',
-        link: 'https://gitee.com/not-trace',
+        link: 'https://github.com/not-trace',
       },
       {
         iconClass: 'icon-erji',

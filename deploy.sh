@@ -10,8 +10,6 @@ npm run build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
-echo 'blogs.mortals.vip' > CNAME
-
 # deploy to github  pages
 echo 同步至github pages 分支
  if [ -z "$GITHUB" ]; then
@@ -31,16 +29,16 @@ echo 同步至github pages 分支
  git push -f $githubUrl master:pages # 推送到github pages分支
 
 # deploy to coding
-echo 同步至Coding pages仓库
-if [ -z "$CODING" ]; then  # -z 字符串 长度为0则为true；$CODING来自于github仓库`Settings/Secrets`设置的私密环境变量
-   echo 秘钥Coding
-   codingUrl=git@e.coding.net:zszl/blog/blog.git
-else
-   codingUrl=https://WxQGVvHQav:${CODING}@e.coding.net/zszl/blog/pages.git
-   echo 个人令牌Coding
-fi
-git push -f $codingUrl master # 推送到coding pages仓库
-cd -
-echo 删除dist
-rm -rf docs/.vuepress/dist
-echo 完成
+# echo 同步至Coding pages仓库
+# if [ -z "$CODING" ]; then  # -z 字符串 长度为0则为true；$CODING来自于github仓库`Settings/Secrets`设置的私密环境变量
+#    echo 秘钥Coding
+#    codingUrl=git@e.coding.net:zszl/blog/blog.git
+# else
+#    codingUrl=https://WxQGVvHQav:${CODING}@e.coding.net/zszl/blog/pages.git
+#    echo 个人令牌Coding
+# fi
+# git push -f $codingUrl master # 推送到coding pages仓库
+# cd -
+# echo 删除dist
+# rm -rf docs/.vuepress/dist
+# echo 完成
