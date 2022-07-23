@@ -1,10 +1,10 @@
 // 插件配置
 module.exports = [
   // 本地插件
-  [require('../plugins/love-me/index.js'), { // 鼠标点击爱心特效.
-    // color: '#11a8cd', // 爱心颜色，默认随机色
-    excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
-  }],
+  // [require('../plugins/love-me/index.js'), { // 鼠标点击爱心特效.
+  //   // color: '#11a8cd', // 爱心颜色，默认随机色
+  //   excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
+  // }],
 
   // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
   [
@@ -71,22 +71,22 @@ module.exports = [
     },
   ],
 
-  [
-    'vuepress-plugin-comment', // 评论
-    {
-      choosen: 'valine',
-      options: {
-		el: '#valine-vuepress-comment',
-		appId: 'PKrJKhfLqw2fzuHQKtKRL0Ps-gzGzoHsz',
-		appKey: 'XRsrwduoXNm83L93hm788qH4',
-		visitor: true, // 阅读量统计
-		// 必填
-		requiredFields:['nick','mail'],
-		recordIP: true,
-		enableQQ: true
-      },
-    },
-  ],
+  // [
+  //   'vuepress-plugin-comment', // 评论
+  //   {
+  //     choosen: 'valine',
+  //     options: {
+	// 	el: '#valine-vuepress-comment',
+	// 	appId: 'PKrJKhfLqw2fzuHQKtKRL0Ps-gzGzoHsz',
+	// 	appKey: 'XRsrwduoXNm83L93hm788qH4',
+	// 	visitor: true, // 阅读量统计
+	// 	// 必填
+	// 	requiredFields:['nick','mail'],
+	// 	recordIP: true,
+	// 	enableQQ: true
+  //     },
+  //   },
+  // ],
   [
     '@vuepress/last-updated', // "上次更新"时间格式
     {
