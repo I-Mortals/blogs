@@ -25,9 +25,10 @@ jobs: # 工作流
           GITHUB: ${{ secrets.GITHUB }} # toKen私密变量
           # CODING: ${{ secrets.CODING }} # toKen私密变量
         run: |
-          npm install
-          npm i vuepress -g
-          npm run deploy
+          npm install -g yarn
+          yarn
+          yarn install
+          yarn deploy
         # package.json 中添加 "deploy": "bash deploy.sh"
 #       - name: Sync to CODING # 同步至coding
 #         uses: serverlesslife-cn/sync-repo-to-coding@master
