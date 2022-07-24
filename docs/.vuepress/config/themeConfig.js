@@ -1,6 +1,5 @@
 const nav = require('./nav.js');
 const htmlModules = require('./htmlModules.js');
-// const sidebar = require('./sidebar.js');
 
 // 主题配置
 module.exports = {
@@ -8,7 +7,7 @@ module.exports = {
   nav,
   sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
   logo: '/img/EB-logo.png', // 导航栏logo
-  repo: 'https://gitee.com/not-trace', // 导航栏右侧生成Github链接
+  repo: 'https://github.com/not-trace/blogs', // 导航栏右侧生成Github链接
   searchMaxSuggestions: 10, // 搜索结果显示最大数
   lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
   docsDir: 'docs', // 编辑的文件夹
@@ -56,7 +55,7 @@ module.exports = {
   },
   blogger: {
     // 博主信息，显示在首页侧边栏
-    avatar: 'http://trace.maicaii.cn/img/20210715003844.png',
+    avatar: 'https://figure.imortals.cn/img/20210715003844.png',
     name: 'Mortal红尘',
     slogan: '热爱各种技术的一枚憨憨前端',
   },

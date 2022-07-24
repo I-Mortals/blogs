@@ -1,0 +1,25 @@
+<template><div><h1 id="golang-值" tabindex="-1"><a class="header-anchor" href="#golang-值" aria-hidden="true">#</a> golang-值</h1>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>package main
+import &quot;fmt&quot;
+func main () {
+    
+    // 可以一次性声明多个变量,同时初始化值
+    var a,b int= 1,2
+    fmt.Println(a,b) // 1,2
+
+    // 单类型声明
+    var c string = &quot;str&quot;
+    fmt.Println(c) // str,零值 空白
+
+    var d bool // 零值 false
+    fmt.Println(d)
+
+    // 声明变量没有给出对应的初始值时，变量将会初始化为零值，int的零值是0
+    var age int // 零值 0
+    fmt.Println(age)
+
+    // 简写 var e int = 2 简写等于 e:=2 , 初始化什么值变量就是什么类型
+    e:=2
+    fmt.Println(e) // 2
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>

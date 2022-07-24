@@ -1,10 +1,10 @@
 // 插件配置
 module.exports = [
   // 本地插件
-  // [require('../plugins/love-me/index.js'), { // 鼠标点击爱心特效.
-  //   // color: '#11a8cd', // 爱心颜色，默认随机色
-  //   excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
-  // }],
+  [require('../plugins/love-me/index.js'), { // 鼠标点击爱心特效.
+    // color: '#11a8cd', // 爱心颜色，默认随机色
+    excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
+  }],
 
   // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
   [
@@ -24,6 +24,10 @@ module.exports = [
         {
           title: '在Vue API中搜索',
           frontUrl: 'https://cn.vuejs.org/v2/api/#',
+        },
+        {
+          title: "在Google中搜索",
+          frontUrl:"https://www.google.com/search?q="
         },
         {
           title: '在Bing中搜索',
@@ -70,23 +74,6 @@ module.exports = [
       },
     },
   ],
-
-  // [
-  //   'vuepress-plugin-comment', // 评论
-  //   {
-  //     choosen: 'valine',
-  //     options: {
-	// 	el: '#valine-vuepress-comment',
-	// 	appId: 'PKrJKhfLqw2fzuHQKtKRL0Ps-gzGzoHsz',
-	// 	appKey: 'XRsrwduoXNm83L93hm788qH4',
-	// 	visitor: true, // 阅读量统计
-	// 	// 必填
-	// 	requiredFields:['nick','mail'],
-	// 	recordIP: true,
-	// 	enableQQ: true
-  //     },
-  //   },
-  // ],
   [
     '@vuepress/last-updated', // "上次更新"时间格式
     {
@@ -96,31 +83,4 @@ module.exports = [
       },
     },
   ],
-  [
-	  "music-bar",
-	        {
-	          //手动添加歌曲,支持 URLs 或 base64 data URIs ,默认为空
-	          playList: [],
-	   
-	          platform: [
-	            //目前仅支持网易云 TODO:多平台支持,默认为空数组
-	            {
-	              name: "music.163.com",
-	              // songIDs:[]//支持多个歌曲 ID
-	              playListIDs: ["6861154058"] //支持多个歌单 ID
-	            }
-	          ],
-	   
-	          timeOut: 2000, //加载超时,单位毫秒,默认2000
-	   
-	          firstClickPlay: true, //首次点击自动播放,对移动端友好
-	   
-	          debugMode: false // 开发模式，如果在开发环境中，输出日志到控制台，默认 true
-	   
-	          //background: <String> //主容器样式
-	          //                       default: "linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%)"
-	   
-	          //frameColor: <String> default: $accentColor
-	        }
-  ]
 ]
