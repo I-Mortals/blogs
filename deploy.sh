@@ -10,7 +10,7 @@ npm run build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
-# deploy to github  pages
+# 同步至github pages 分支
 echo 同步至github pages 分支
  if [ -z "$GITHUB" ]; then
    msg='deploy'
@@ -28,7 +28,11 @@ echo 同步至github pages 分支
  git commit -m "${msg}"
  git push -f $githubUrl master:pages # 推送到github pages分支
 
-# deploy to coding
+# 部署到服务器
+echo ${SERVERADDRESS} >> /scpfile
+scp -r ./* root@81.68.120.54:/www/pages/ -i /scpfile
+
+# echo 同步至Coding pages仓库
 # echo 同步至Coding pages仓库
 # if [ -z "$CODING" ]; then  # -z 字符串 长度为0则为true；$CODING来自于github仓库`Settings/Secrets`设置的私密环境变量
 #    echo 秘钥Coding
