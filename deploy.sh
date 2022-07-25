@@ -27,7 +27,7 @@ echo 同步至github pages 分支
  git add -A
  git commit -m "${msg}"
  git push -f $githubUrl master:pages # 推送到github pages分支
-cp ../dist /home/
+# cp -r ../dist /home/
 # 部署到服务器
 # echo ${SERVERADDRESS} > ./scpfile.txt
 # mv ./scpfile.txt ./scpfile
