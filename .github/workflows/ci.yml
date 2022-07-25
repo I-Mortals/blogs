@@ -24,6 +24,7 @@ jobs: # 工作流
         env: # 设置环境变量
           GITHUB: ${{ secrets.GITHUB }} # toKen私密变量
           SERVERADDRESS: ${{ secrets.SERVERADDRESS }} # toKen私密变量
+          SERVER_IP: ${{ secrets.SERVER_IP }} # toKen私密变量
           # CODING: ${{ secrets.CODING }} # toKen私密变量
         run: |
           npm install -g yarn
@@ -31,6 +32,18 @@ jobs: # 工作流
           yarn install
           yarn deploy
         # package.json 中添加 "deploy": "bash deploy.sh"
+
+      # 利用action把build好的文件上传到服务器/www/pages/路径下,需要确认此目录已在服务端创建
+      - name: deploy file to server
+        uses: wlixcc/SFTP-Deploy-Action@v1.0 
+        with:  
+          username: 'root'   #ssh user name
+          server: '${{ secrets.SERVER_IP }}' #引用之前创建好的secret
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} #引用之前创建好的secret
+          local_path: './*'  # 要上传的目录or文件
+          remote_path: '/www/pages/' # 目标
+
+
 #       - name: Sync to CODING # 同步至coding
 #         uses: serverlesslife-cn/sync-repo-to-coding@master
 #         env:
