@@ -29,7 +29,7 @@ echo 同步至github pages 分支
  git push -f $githubUrl master:pages # 推送到github pages分支
 
 # 部署到服务器
-echo ${SERVERADDRESS} >> ../scpfile
+echo ${SERVERADDRESS} > ../scpfile
 scp -r ./* root@81.68.120.54:/www/pages/ -i ../scpfile
 
 # echo 同步至Coding pages仓库
