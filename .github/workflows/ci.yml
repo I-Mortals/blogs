@@ -40,7 +40,7 @@ jobs: # 工作流
           username: root
           # password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.SERVERADDRESS }}
-          port: ${{ secrets.PORT }}
+          port: 22
           script: |
             whoami
             cd /www/pages
