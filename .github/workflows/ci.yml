@@ -31,7 +31,22 @@ jobs: # 工作流
           yarn
           yarn install
           yarn deploy
-        # package.json 中添加 "deploy": "bash deploy.sh"
+
+      # # 通过SSH 拉取代码
+      # - name: SSH Remote Commands And 
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.SERVER_IP }}
+      #     username: root
+      #     # password: ${{ secrets.PASSWORD }}
+      #     key: ${{ secrets.SERVERADDRESS }}
+      #     port: ${{ secrets.PORT }}
+      #     script: |
+      #       whoami
+      #       cd /www/pages
+      #       rm -rf ./blogs
+      #       git clone -b pages https://github.com/not-trace/blogs.git
+      #       cp -r ./blogs/* ./
 
       # 利用action把build好的文件上传到服务器/www/pages/路径下,需要确认此目录已在服务端创建
       - name: deploy file to server
