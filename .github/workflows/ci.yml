@@ -1,34 +1,34 @@
-name: CI
+# name: CI
 
-# 在master分支发生push事件时触发。
-on: 
-  push:
-    branches:
-      - main
-jobs: # 工作流
-  build:
-    runs-on: ubuntu-latest #运行在虚拟机环境ubuntu-latest
-    environment: Production
+# # 在master分支发生push事件时触发。
+# on: 
+#   push:
+#     branches:
+#       - main
+# jobs: # 工作流
+#   build:
+#     runs-on: ubuntu-latest #运行在虚拟机环境ubuntu-latest
+#     environment: Production
 
-    strategy:
-      matrix:
-        node-version: [14.x]
+#     strategy:
+#       matrix:
+#         node-version: [14.x]
 
-    steps: # 步骤数组
-      - name: Checkout # 步骤1
-        uses: actions/checkout@v1 # 使用的动作。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
-      - name: Use Node.js ${{ matrix.node-version }} # 步骤2
-        uses: actions/setup-node@v1 # 作用：安装nodejs
-        with:
-          node-version: ${{ matrix.node-version }} # 版本
-      - name: run deploy.sh # 步骤3 （同时部署到github和coding）
-        env: # 设置环境变量
-          GITHUB: ${{ secrets.GITHUB }} # toKen私密变量
-          SERVERADDRESS: ${{ secrets.SERVERADDRESS }} # toKen私密变量
-          SERVER_IP: ${{ secrets.SERVER_IP }} # toKen私密变量
-          # CODING: ${{ secrets.CODING }} # toKen私密变量
-        run: |
-          npm install -g yarn
-          yarn
-          yarn install
-          yarn deploy
+#     steps: # 步骤数组
+#       - name: Checkout # 步骤1
+#         uses: actions/checkout@v1 # 使用的动作。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
+#       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
+#         uses: actions/setup-node@v1 # 作用：安装nodejs
+#         with:
+#           node-version: ${{ matrix.node-version }} # 版本
+#       - name: run deploy.sh # 步骤3 （同时部署到github和coding）
+#         env: # 设置环境变量
+#           GITHUB: ${{ secrets.GITHUB }} # toKen私密变量
+#           SERVERADDRESS: ${{ secrets.SERVERADDRESS }} # toKen私密变量
+#           SERVER_IP: ${{ secrets.SERVER_IP }} # toKen私密变量
+#           # CODING: ${{ secrets.CODING }} # toKen私密变量
+#         run: |
+#           npm install -g yarn
+#           yarn
+#           yarn install
+#           yarn deploy
