@@ -17,7 +17,7 @@ echo 同步至github pages 分支
    echo 秘钥Github
    githubUrl=git@github.com:I-Mortals/blogs.git
  else
-   msg='来自github actions的自动部署'
+   msg='来自github actions的自动编译'
    echo 个人令牌Github
    githubUrl=https://I-Mortals:${GITHUB}@github.com/I-Mortals/blogs.git
    git config --global user.name "Mortal红尘"
