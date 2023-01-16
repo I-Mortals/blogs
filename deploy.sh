@@ -21,7 +21,7 @@ echo 同步至github pages 分支
    echo 个人令牌Github
    githubUrl=https://I-Mortals:${GITHUB}@github.com/I-Mortals/blogs.git
    git config --global user.name "Mortal红尘"
-   git config --global user.email "not_trace@163.com"
+   git config --global user.email "wuchen.cg@gmail.com"
  fi
  git init
  git add -A
