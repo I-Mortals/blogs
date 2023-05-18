@@ -204,13 +204,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
         ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
         // ['meta', { 'http-equiv': 'Content-Security-Policy', content: 'upgrade-insecure-requests' }], 
-// [
-//     'script',
-//     {
-//         async: 'async',
-//         src: "/_vercel/insights/script.js"
-//     }
-// ]
+        [
+            'script',
+            {
+                async: 'async',
+                src: "/_vercel/insights/script.js"
+            }
+        ],
         // [
         //   'script',
         //   {
