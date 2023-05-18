@@ -7,8 +7,6 @@ import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
 import htmlModule from './config/htmlModules'
 import dayjs from 'dayjs'
 
-import { inject } from '@vercel/analytics';
-inject();
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
     theme: 'vdoing', // 使用npm主题包
@@ -206,7 +204,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
         ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
         // ['meta', { 'http-equiv': 'Content-Security-Policy', content: 'upgrade-insecure-requests' }], 
-
+// [
+//     'script',
+//     {
+//         async: 'async',
+//         src: "/_vercel/insights/script.js"
+//     }
+// ]
         // [
         //   'script',
         //   {
