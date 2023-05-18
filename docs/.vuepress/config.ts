@@ -6,6 +6,10 @@ import { defineConfig4CustomTheme, UserPlugins, HeadTags } from 'vuepress/config
 import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
 import htmlModule from './config/htmlModules'
 import dayjs from 'dayjs'
+
+import { inject } from '@vercel/analytics';
+inject();
+
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
     theme: 'vdoing', // 使用npm主题包
     // theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
