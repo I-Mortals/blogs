@@ -179,7 +179,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             // 页脚信息
             createYear: 2021, // 博客创建年份
             copyrightInfo:
-                'Mortal红尘 | <a href="https://beian.miit.gov.cn">黔ICP备2021006288号</a>', // 博客版权信息，支持a标签
+                'Mortal红尘 ', // 博客版权信息，支持a标签
         },
         // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
         extendFrontmatter: {
@@ -261,7 +261,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                     },
                     {
                         title: '通过百度搜索本站的',
-                        frontUrl: 'https://www.baidu.com/s?wd=site%3Axugaoyi.com%20',
+                        frontUrl: 'https://www.baidu.com/s?wd=site%3Amortal-blogs.vercel.app%20',
                     },
                 ],
             },
