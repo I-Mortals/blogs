@@ -150,7 +150,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
         blogger: {
             // 博主信息，显示在首页侧边栏
-            avatar: 'https://figure.imortals.cn/img/20210715003844.png',
+            avatar: '/img/blogs.png',
             name: 'Mortal红尘',
             slogan: '热爱各种技术的一枚憨憨前端',
         },
